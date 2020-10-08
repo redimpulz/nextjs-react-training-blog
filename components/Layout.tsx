@@ -4,18 +4,6 @@ import styles from './layout.module.css';
 import utilStyles from '@/styles/utils.module.css';
 import Link from 'next/link';
 
-// function Layout({ children }) {
-//   return <div>{children}</div>;
-// }
-
-// const Layout: React.FC = ({ children }) => {
-//   return <div>{children}</div>;
-// };
-
-// const Layout: React.FC = ({ children }) => {
-//   return <div className={styles.container}>{children}</div>;
-// };
-
 const name = 'REDIMPULZ';
 export const siteTitle = 'Next.js Sample Website';
 
