@@ -1,9 +1,11 @@
 import React from 'react';
 import { InferGetServerSidePropsType } from 'next';
+import Link from 'next/link';
 import Head from 'next/head';
 
 import { getSortedPostsData } from '@/lib/posts';
 
+import Date from '@/components/Date';
 import Layout, { siteTitle } from '@/components/Layout';
 import utilStyles from '@/styles/utils.module.css';
 
@@ -24,6 +26,7 @@ export default function Home({
       <Head>
         <title>{siteTitle}</title>
       </Head>
+
       <section className={utilStyles.headingMd}>
         <p>We are REDIMPULZ!!</p>
         <p>
@@ -31,24 +34,21 @@ export default function Home({
           <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
         </p>
       </section>
+
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
-              {title}
+              <Link href="/posts/[id]" as={`/posts/${id}`}>
+                <a>{title}</a>
+              </Link>
               <br />
-              {id}
-              <br />
-              {date}
+              <small className={utilStyles.lightText}>
+                <Date dateString={date} />
+              </small>
             </li>
           ))}
-
-          {/* {allPostsData.map((x) => (
-            <li className={utilStyles.listItem} key={x}>
-              <img src={x} style={{ width: 200, height: 200 }} />
-            </li>
-          ))} */}
         </ul>
       </section>
     </Layout>
