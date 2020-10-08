@@ -5,57 +5,6 @@ import Head from 'next/head';
 import Layout from '@/components/Layout';
 import Alert from '@/components/Alert';
 
-// export default function FirstPost() {
-//   return <h1>First Post</h1>;
-// }
-
-// export default function FirstPost() {
-//   return (
-//     <>
-//       <h1>First Post</h1>
-//       <h2>
-//         <Link href="/">
-//           <a>Back to home</a>
-//         </Link>
-//       </h2>
-//     </>
-//   );
-// }
-
-// export default function FirstPost() {
-//   return (
-//     <>
-//       <Head>
-//         <title>First Post</title>
-//       </Head>
-//       <h1>First Post</h1>
-//       <h2>
-//         <Link href="/">
-//           <a>Back to home</a>
-//         </Link>
-//       </h2>
-//     </>
-//   );
-// }
-
-// export default function FirstPost() {
-//   return (
-//     <Layout>
-//       <Head>
-//         <title>First Post</title>
-//       </Head>
-//       <h1>First Post</h1>
-//       <h2>
-//         <Link href="/">
-//           <a>Back to home</a>
-//         </Link>
-//       </h2>
-//     </Layout>
-//   );
-// }
-
-// fadfa
-
 export default function FirstPost() {
   return (
     <Layout>
